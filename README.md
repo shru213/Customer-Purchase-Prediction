@@ -18,52 +18,23 @@ The model's performance is evaluated using precision, recall, and accuracy.
 
 ## Project Structure
 
-* `assignment_solution.ipynb`: The Jupyter Notebook containing all steps from data loading and exploration to model training and evaluation.
+* `assignment_solution.ipynb`: The Jupyter Notebook containing all project code.
 * `social_network_ads.csv`: The dataset used for this analysis.
+* `plot.png`: A visualization of the dataset's features.
+* `results.png`: A screenshot of the model's performance report.
 
 ## Libraries Used
 
 * **Pandas:** For data loading and manipulation.
 * **Matplotlib:** For data visualization.
-* **Scikit-learn (sklearn):** For splitting the data, building the `LogisticRegression` model, and evaluating its performance with a `classification_report`.
+* **Scikit-learn (sklearn):** For splitting the data, building the `LogisticRegression` model, and evaluating its performance.
 
+## Data Visualization
 
+The scatter plot below shows the relationship between `Age` and `Estimated Salary`, colored by the user's purchase decision. This visualization helps to show that older users with higher salaries (top right) are more likely to purchase the product (yellow dots).
+
+![Age vs. Salary Scatter Plot](plot.png)
 
 ## How to Run This Project
 
 1.  **Clone the repository:**
-    ```sh
-    git clone [https://github.com/YOUR_USERNAME/Customer-Purchase-Prediction.git](https://github.com/YOUR_USERNAME/Customer-Purchase-Prediction.git)
-    cd Customer-Purchase-Prediction
-    ```
-    *(Remember to replace `YOUR_USERNAME` with your actual GitHub username!)*
-
-2.  **Install the required libraries:**
-    ```sh
-    pip install -r requirements.txt
-    ```
-
-3.  **Run the Jupyter Notebook:**
-    Launch Jupyter Notebook or Jupyter Lab and open the `assignment_solution.ipynb` file.
-    ```sh
-    jupyter notebook assignment_solution.ipynb
-    ```
-
-## Model Results
-
-The logistic regression model was trained on 70% of the data and evaluated on the 30% test set.
-
-**Classification Report:**
-
-The report shows how well the model predicted purchases on new data it hadn't seen before. The accuracy is 89%.
-
-```
-              precision    recall  f1-score   support
-
-           0       0.88      0.96      0.92        73
-           1       0.91      0.79      0.85        47
-
-    accuracy                           0.89       120
-   macro avg       0.90      0.87      0.88       120
-weighted avg       0.89      0.89      0.89       120
-```
